@@ -1,11 +1,12 @@
 const mongoose=require('mongoose')
 
-mongoose.connect('mongodb://127.0.0.1:27017/taskmanager-api',{
+mongoose.connect(process.env.MONGODB_CONNECTION_URL,{
     useNewUrlParser:true,
     useCreateIndex:true,
     useFindAndModify:false
 
 })
+// mongodb+srv://taskapp:Sahil%40128788_@cluster0.65fas.mongodb.net/test
 // const User=mongoose.model('User',{
 //     name:{
 //         type:String,
